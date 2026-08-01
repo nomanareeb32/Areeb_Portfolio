@@ -222,15 +222,34 @@
     letter-spacing:0.03em;
   }
 
+  /* portrait photo */
+  .hero-photo{
+    max-width:280px;
+    margin:0 auto 8px;
+    border:1px solid var(--line);
+    padding:10px;
+    background:var(--ink-2);
+  }
+  .hero-photo img{
+    display:block;
+    width:100%;
+    aspect-ratio:4/5;
+    object-fit:cover;
+    object-position:top center;
+    filter:grayscale(85%) contrast(1.05);
+    transition:filter .4s ease;
+  }
+  .hero-photo:hover img{filter:grayscale(0%) contrast(1.02);}
+
   /* orbit signature */
   .orbit-wrap{
     position:relative;
-    height:380px;
+    height:300px;
     display:flex;
     align-items:center;
     justify-content:center;
   }
-  .orbit-svg{width:100%; height:100%; max-width:380px;}
+  .orbit-svg{width:100%; height:100%; max-width:300px;}
   .orbit-ring{
     fill:none;
     stroke:var(--line);
@@ -571,7 +590,11 @@
       </div>
     </div>
 
-    <div class="orbit-wrap" aria-hidden="true">
+    <div>
+      <div class="hero-photo">
+        <img src="Portfolio_pic.jpeg" alt="Areeb Noman">
+      </div>
+      <div class="orbit-wrap" aria-hidden="true">
       <svg class="orbit-svg" viewBox="0 0 380 380">
         <circle class="orbit-ring" cx="190" cy="190" r="120"/>
 
@@ -603,6 +626,7 @@
         <circle class="orbit-core" cx="190" cy="190" r="20"/>
         <text x="190" y="195" text-anchor="middle" class="orbit-core-label">ME</text>
       </svg>
+      </div>
     </div>
   </div>
 </header>
