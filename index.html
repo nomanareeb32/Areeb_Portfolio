@@ -179,7 +179,7 @@
     padding:12px 22px;
     border-radius:3px;
     text-decoration:none;
-    font-family:'IBM Plex Mono', monospace;
+    font-family:'IBM Plex Sans', sans-serif;
     font-size:13px;
     letter-spacing:0.03em;
     border:1px solid var(--line);
@@ -217,7 +217,7 @@
   .stat span{
     font-size:11.5px;
     color:var(--paper-dim);
-    font-family:'IBM Plex Mono', monospace;
+    font-family:'IBM Plex Sans', sans-serif;
     text-transform:uppercase;
     letter-spacing:0.03em;
   }
@@ -264,7 +264,8 @@
   }
   .orbit-dot text{
     font-family:'IBM Plex Mono', monospace;
-    font-size:9px;
+    font-size:13px;
+    font-weight:600;
     fill:var(--paper-dim);
     text-transform:uppercase;
     letter-spacing:0.05em;
@@ -597,28 +598,28 @@
       </div>
       <div class="orbit-wrap" aria-hidden="true">
       <svg class="orbit-svg" viewBox="0 0 380 380">
-        <circle class="orbit-ring" cx="190" cy="190" r="120"/>
+        <circle class="orbit-ring" cx="190" cy="190" r="90"/>
 
         <g class="spin-slow">
-          <g class="orbit-dot" transform="translate(190,70)">
+          <g class="orbit-dot" transform="translate(190,100)">
             <circle r="5"/>
             <g class="counter-spin-slow"><text x="0" y="22" text-anchor="middle">Math</text></g>
           </g>
         </g>
         <g class="spin-slow">
-          <g class="orbit-dot" transform="translate(310,190)">
+          <g class="orbit-dot" transform="translate(280,190)">
             <circle r="5"/>
             <g class="counter-spin-slow"><text x="0" y="22" text-anchor="middle">Code</text></g>
           </g>
         </g>
         <g class="spin-slow">
-          <g class="orbit-dot" transform="translate(190,310)">
+          <g class="orbit-dot" transform="translate(190,280)">
             <circle r="5"/>
             <g class="counter-spin-slow"><text x="0" y="22" text-anchor="middle">Research</text></g>
           </g>
         </g>
         <g class="spin-slow">
-          <g class="orbit-dot" transform="translate(70,190)">
+          <g class="orbit-dot" transform="translate(100,190)">
             <circle r="5"/>
             <g class="counter-spin-slow"><text x="0" y="22" text-anchor="middle">Teaching</text></g>
           </g>
