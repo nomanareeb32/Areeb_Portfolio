@@ -250,11 +250,17 @@
     letter-spacing:0.05em;
   }
   .spin-slow{ animation: spin 40s linear infinite; transform-origin:190px 190px;}
-  .spin-slow-rev{ animation: spin 55s linear infinite reverse; transform-origin:190px 190px;}
-  .spin-mid{ animation: spin 28s linear infinite; transform-origin:190px 190px;}
+  .counter-spin-slow{ animation: spin 40s linear infinite reverse; transform-origin:0 0;}
+  .orbit-core-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    font-weight:500;
+    fill:var(--ink);
+    letter-spacing:0.04em;
+  }
   @keyframes spin{ to{ transform:rotate(360deg);} }
   @media (prefers-reduced-motion: reduce){
-    .spin-slow, .spin-slow-rev, .spin-mid{ animation:none; }
+    .spin-slow, .counter-spin-slow{ animation:none; }
   }
 
   /* ---------- SECTION SHARED ---------- */
@@ -567,35 +573,35 @@
 
     <div class="orbit-wrap" aria-hidden="true">
       <svg class="orbit-svg" viewBox="0 0 380 380">
-        <circle class="orbit-ring" cx="190" cy="190" r="150"/>
-        <circle class="orbit-ring" cx="190" cy="190" r="105"/>
-        <circle class="orbit-ring" cx="190" cy="190" r="60"/>
-        <circle class="orbit-core" cx="190" cy="190" r="7"/>
+        <circle class="orbit-ring" cx="190" cy="190" r="120"/>
 
         <g class="spin-slow">
-          <g class="orbit-dot" transform="translate(190,40)">
+          <g class="orbit-dot" transform="translate(190,70)">
             <circle r="5"/>
-            <text x="10" y="4">Math</text>
-          </g>
-        </g>
-        <g class="spin-slow-rev">
-          <g class="orbit-dot" transform="translate(295,190)">
-            <circle r="5"/>
-            <text x="10" y="4">Code</text>
-          </g>
-        </g>
-        <g class="spin-mid">
-          <g class="orbit-dot" transform="translate(190,130)">
-            <circle r="5"/>
-            <text x="10" y="4">Research</text>
+            <g class="counter-spin-slow"><text x="0" y="22" text-anchor="middle">Math</text></g>
           </g>
         </g>
         <g class="spin-slow">
-          <g class="orbit-dot" transform="translate(110,190)">
+          <g class="orbit-dot" transform="translate(310,190)">
             <circle r="5"/>
-            <text x="-58" y="4">Teaching</text>
+            <g class="counter-spin-slow"><text x="0" y="22" text-anchor="middle">Code</text></g>
           </g>
         </g>
+        <g class="spin-slow">
+          <g class="orbit-dot" transform="translate(190,310)">
+            <circle r="5"/>
+            <g class="counter-spin-slow"><text x="0" y="22" text-anchor="middle">Research</text></g>
+          </g>
+        </g>
+        <g class="spin-slow">
+          <g class="orbit-dot" transform="translate(70,190)">
+            <circle r="5"/>
+            <g class="counter-spin-slow"><text x="0" y="22" text-anchor="middle">Teaching</text></g>
+          </g>
+        </g>
+
+        <circle class="orbit-core" cx="190" cy="190" r="20"/>
+        <text x="190" y="195" text-anchor="middle" class="orbit-core-label">ME</text>
       </svg>
     </div>
   </div>
