@@ -456,14 +456,13 @@
     display:grid;
     grid-template-columns:repeat(3, 1fr);
     gap:1px;
-    background:var(--line);
-    border:1px solid var(--line);
   }
-  @media(max-width:760px){.comp-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:760px){.comp-grid{grid-template-columns:1fr 1fr;} .comp-grid .comp{grid-column:auto !important;}}
   @media(max-width:480px){.comp-grid{grid-template-columns:1fr;}}
   .comp{
     background:var(--ink);
     padding:22px 20px;
+    box-shadow:inset 0 0 0 1px var(--line);
   }
   .comp-result{
     font-family:'Fraunces', serif;
@@ -749,11 +748,14 @@
 
     <div class="comp-grid reveal" style="margin-top:48px;">
       <div class="comp"><div class="comp-result">4th, Bangladesh</div><div class="comp-name">ROSATOM Icebreaker Knowledge 2025</div></div>
+      <div class="comp"><div class="comp-result">Semi-Final Qualifier</div><div class="comp-name">International Computer Science Competition, 2026</div></div>
       <div class="comp"><div class="comp-result">National Round</div><div class="comp-name">NHSPC — Python &amp; C, 2022</div></div>
       <div class="comp"><div class="comp-result">3rd Runners-up</div><div class="comp-name">IGAC Big Bang III — Fiscal Flash, 2025</div></div>
       <div class="comp"><div class="comp-result">Merit list</div><div class="comp-name">Indonesian Mathematics Competition</div></div>
       <div class="comp"><div class="comp-result">Sole qualifier</div><div class="comp-name">Josephite Math Mania, 2019</div></div>
-      <div class="comp"><div class="comp-result">Team lead, national</div><div class="comp-name">Banglar Math Team Championship, 2024</div></div>
+      <div class="comp comp-spacer" aria-hidden="true"></div>
+      <div class="comp" style="grid-column:2;"><div class="comp-result">Team lead, national</div><div class="comp-name">Banglar Math Team Championship, 2024</div></div>
+      <div class="comp comp-spacer" aria-hidden="true"></div>
     </div>
   </div>
 </section>
